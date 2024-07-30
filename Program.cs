@@ -8,6 +8,9 @@ List<Pessoa> hospedes = new List<Pessoa>();
 
 Pessoa p1 = new Pessoa(nome: "Hóspede 1");
 Pessoa p2 = new Pessoa(nome: "Hóspede 2");
+Pessoa p3 = new Pessoa(nome: "Hóspede 3");
+Pessoa p4 = new Pessoa(nome: "Hóspede 4");
+
 
 hospedes.Add(p1);
 hospedes.Add(p2);
@@ -19,6 +22,15 @@ Suite suite = new Suite(tipoSuite: "Premium", capacidade: 2, valorDiaria: 30);
 Reserva reserva = new Reserva(diasReservados: 5);
 reserva.CadastrarSuite(suite);
 reserva.CadastrarHospedes(hospedes);
+/*
+teste da exception
+hospedes.Add(p3);
+hospedes.Add(p4);
+
+Reserva reserva2 = new Reserva(diasReservados: 15);
+reserva2.CadastrarSuite(suite);
+reserva2.CadastrarHospedes(hospedes);
+*/
 
 // Exibe a quantidade de hóspedes e o valor da diária
 Console.WriteLine($"Hóspedes: {reserva.ObterQuantidadeHospedes()}");
